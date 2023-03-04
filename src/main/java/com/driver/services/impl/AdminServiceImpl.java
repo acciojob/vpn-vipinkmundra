@@ -67,6 +67,7 @@ public class AdminServiceImpl implements AdminService {
                 country.setCountryName(CountryName.USA);
                 country.setCode(CountryName.USA.toCode());
             }
+            country.setServiceProvider(serviceProvider);
             serviceProvider.getCountryList().add(country);
             serviceProviderRepository1.save(serviceProvider);
 

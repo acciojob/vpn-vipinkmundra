@@ -27,6 +27,9 @@ public class ConnectionServiceImpl implements ConnectionService {
         }else if(countryName.equalsIgnoreCase(user.getOriginalCountry().getCountryName().toString())){
             return user;
         }else{
+            if(user.getServiceProviderList()==null){
+                throw new Exception("Unable to connect");
+            }
             List<ServiceProvider> serviceProviderList = user.getServiceProviderList();
             int min = Integer.MAX_VALUE;
             ServiceProvider serviceProvider1 = null;
