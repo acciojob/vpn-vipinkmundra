@@ -14,7 +14,7 @@ public class User {
     private String password;
     private String originalIp;
     private String maskedIp;
-    private boolean connected;
+    private Boolean connected;
 
     @ManyToMany
     @JoinColumn
@@ -69,7 +69,7 @@ public class User {
         this.maskedIp = maskedIp;
     }
 
-    public boolean getConnected() {
+    public Boolean getConnected() {
         return connected;
     }
 
